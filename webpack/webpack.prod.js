@@ -16,7 +16,7 @@ module.exports = merge(config, {
     minimize: true,
     minimizer: [
       new ESBuildMinifyPlugin({
-        target: 'es2015',
+        target: 'es2015'
       })
     ]
   },
@@ -24,7 +24,7 @@ module.exports = merge(config, {
     filename: '[name].[contenthash:8].js',
     chunkFilename: '[name].[contenthash:8].js',
     assetModuleFilename: 'assets/[hash][ext]',
-    path: resolve(__dirname, './build'),
+    path: resolve(__dirname, '../build'),
     publicPath: '/',
     clean: true
   }

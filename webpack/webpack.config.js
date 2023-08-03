@@ -20,18 +20,17 @@ module.exports = {
       emitError: true,
       emitWarning: true,
       failOnError: true,
-      extensions: ['.ts', '.tsx', '.js']
+      extensions: ['.ts', '.js']
     })
   ],
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|js)$/,
         loader: 'esbuild-loader',
         include: [resolve(__dirname, 'src')],
         exclude: /node_modules/,
         options: {
-          loader: 'tsx',
           target: 'es2015'
         }
       },
@@ -44,7 +43,7 @@ module.exports = {
   },
   resolve: {
     symlinks: false,
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.js'],
     plugins: [new TsconfigPathsPlugin()]
   },
   optimization: {
