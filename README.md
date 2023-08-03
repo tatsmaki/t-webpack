@@ -34,15 +34,16 @@ To analyze the code and find problems according to the given rules, described in
 ├── public
 │   └── index.html (template)
 ├── src
-│   ├── @types
+│   ├── @types/index.d.ts
 │   ├── assets
 │   └── index.ts (entry point)
-├── .eslintrc.js
-├── .prettierrc
+├── webpack
+│   ├── webpack.config.js
+│   ├── webpack.dev.js
+│   └── webpack.prod.js
+├── .env
+├── .env.example
 ├── package.json
 ├── README.md
-├── tsconfig.json
-├── webpack.config.js
-├── webpack.dev.js
-└── webpack.prod.js
+└── tsconfig.json
 ```
