@@ -11,7 +11,7 @@ module.exports = {
     app: './src/index.ts'
   },
   plugins: [
-    new EnvironmentPlugin([]),
+    new EnvironmentPlugin(['API_URL']),
     new HtmlWebpackPlugin({
       template: './public/index.html'
     }),
@@ -28,7 +28,6 @@ module.exports = {
       {
         test: /\.(ts|js)$/,
         loader: 'esbuild-loader',
-        include: [resolve(__dirname, 'src')],
         exclude: /node_modules/,
         options: {
           target: 'es2015'
